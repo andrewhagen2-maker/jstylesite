@@ -105,27 +105,30 @@ RESEND_API_KEY=your_resend_key       # contact form email delivery
 
 ## Phases
 
-### Phase 1 — Foundation (CURRENT)
+### Phase 1 — Foundation ✅ COMPLETE (except Vercel deploy)
 **Goal:** Scaffold, design system, shared layout, and Home page live on Vercel.
 - [x] Next.js project initialized with Tailwind
 - [x] Dependencies installed (Sanity, React Hook Form, Zod, Resend, lucide-react)
-- [ ] Tailwind config: custom color tokens + font families
-- [ ] Google Fonts integrated (Cormorant Garant + Raleway)
-- [ ] Logo component (JS monogram SVG)
-- [ ] Navbar (links, mobile menu)
-- [ ] Footer (links, tagline, social placeholders)
-- [ ] Home page (Hero, tagline, services teaser, CTA to book)
-- [ ] Deploy to Vercel, confirm live
+- [x] Tailwind config: custom color tokens + font families (via globals.css @theme)
+- [x] Google Fonts integrated (Cormorant Garamond + Raleway)
+- [x] Logo component (JS monogram SVG) — `src/components/Logo.tsx`
+- [x] Navbar (links, mobile menu, scroll-aware) — `src/components/Navbar.tsx`
+- [x] Footer (links, tagline, social placeholders) — `src/components/Footer.tsx`
+- [x] Home page (Hero, services teaser, about teaser, testimonials teaser, CTA)
+- [x] Pushed to GitHub — `andrewhagen2-maker/jstylesite`
+- [ ] **TODO: Deploy to Vercel** (connect GitHub repo at vercel.com)
 
-### Phase 2 — Core Pages
+### Phase 2 — Core Pages ✅ COMPLETE
 **Goal:** All static pages built and styled.
-- [ ] About page (photo placeholder, philosophy section)
-- [ ] Services page (4 services: Personal Styling, Wardrobe Audit, Shopping Accompaniment, Virtual Styling)
-- [ ] Testimonials page (placeholder cards)
-- [ ] FAQ page (placeholder accordion)
-- [ ] Contact page (form + Calendly CTA)
+- [x] About page (photo placeholder, philosophy section, values)
+- [x] Services page (4 services with full descriptions + includes lists)
+- [x] Testimonials page (placeholder cards, featured + grid layout)
+- [x] Blog page (featured post + grid, placeholder posts)
+- [x] Blog post page (single post template)
+- [x] FAQ page (accordion, placeholder Q&As)
+- [x] Contact page (form + Calendly CTA)
 
-### Phase 3 — CMS Integration (Sanity)
+### Phase 3 — CMS Integration (Sanity) ← NEXT
 **Goal:** Blog, testimonials, and FAQ driven by Sanity.
 - [ ] Sanity project created at sanity.io
 - [ ] Sanity schemas: post, testimonial, faq, service
@@ -138,10 +141,11 @@ RESEND_API_KEY=your_resend_key       # contact form email delivery
 
 ### Phase 4 — Contact Form & Email
 **Goal:** Working contact form that delivers email to Johana.
-- [ ] API route: `POST /api/contact`
-- [ ] Resend integration (or fallback: Formspree)
+- [x] API route: `POST /api/contact` (stub ready)
+- [ ] Resend account created + API key added to Vercel env vars
+- [ ] Resend integration wired into `/api/contact/route.ts`
 - [ ] React Hook Form + Zod validation on frontend
-- [ ] Success/error states on form
+- [ ] Success/error states on form (basic version done)
 - [ ] Spam protection (honeypot or Turnstile)
 
 ### Phase 5 — SEO & Performance
